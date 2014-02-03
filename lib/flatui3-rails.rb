@@ -1,1 +1,1 @@
-require 'flatui3/rails'
+require 'flatui3-rails'
