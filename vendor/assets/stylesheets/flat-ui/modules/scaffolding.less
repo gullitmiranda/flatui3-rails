@@ -27,6 +27,9 @@ a {
     color: @link-hover-color;
     text-decoration: none;
   }
+  &:focus {
+    outline: none;
+  }
 }
 
 // Images
@@ -37,10 +40,25 @@ a {
   border-radius: @border-radius-large;
 }
 
+// Image thumbnails
+//
+// Heads up! This is mixin-ed into thumbnails.less for `.thumbnail`.
+.img-thumbnail {
+  padding: @thumbnail-padding;
+  line-height: @line-height-base;
+  background-color: @thumbnail-bg;
+  border: 2px solid @thumbnail-border;
+  border-radius: @thumbnail-border-radius;
+  .transition(all .25s ease-in-out);
+
+  // Keep them at most 100% wide
+  .img-responsive(inline-block);
+}
+
 // Description text under image
 .img-comment {
-  font-size: ceil(@font-size-base * 1.071); // ~15px
-  line-height: @line-height-base;
+  font-size: ceil(@font-size-base * 0.8333); // ~15px
+  line-height: 1.2;
   font-style: italic;
   margin: 24px 0;
 }

@@ -3,10 +3,10 @@
 // --------------------------------------------------
 
 // Module color variable
-@form-color: mix(@base, @inverse, 9%);
+@form-color: mix(@brand-primary, @inverse, 9%);
 
 .login {
-  background: asset-url("login/imac.png") 0 0 no-repeat;
+  background: ~"image-url(login/imac.png) 0 0 no-repeat";
   background-size: 940px 778px;
   color: @inverse;
   margin-bottom: 77px;
@@ -15,7 +15,7 @@
 }
 
 .login-screen {
-  background-color: @firm;
+  background-color: @brand-secondary;
   min-height: 473px;
   padding: 123px 199px 33px 306px;
 }
@@ -33,17 +33,17 @@
   }
   > h4 {
     font-size: 17px;
-    font-weight: 200;
+    font-weight: 300;
     line-height: 34px;
     .opacity(.95);
-  
+
     small {
       color: inherit;
       display: block;
       font-size: inherit;
       font-weight: 700;
-    }  
-  }    
+    }
+  }
 }
 
 // LOGIN FORM
@@ -52,7 +52,7 @@
   background-color: @form-color;
   padding: 24px 23px 20px;
   position: relative;
-  border-radius: @border-radius-large;  
+  border-radius: @border-radius-large;
 
   // Ear
   &:before {
@@ -64,7 +64,7 @@
     position: absolute;
     left: -12px;
     top: 35px;
-    width: 0;    
+    width: 0;
     -webkit-transform: rotate(360deg); // Make corners smooth
   }
   .control-group {
@@ -75,23 +75,23 @@
     border-color: transparent;
     font-size: 17px;
     text-indent: 3px;
-    
+
     &:focus {
-    	border-color: @firm;
-    	
+      border-color: @brand-secondary;
+
       & + .login-field-icon {
-        color: @firm;
-      }  
-    }    
+        color: @brand-secondary;
+      }
+    }
   }
   .login-field-icon {
     color: mix(@gray, @inverse, 60%);
     font-size: 16px;
     position: absolute;
-    right: 13px;
-    top: 9px;
+    right: 15px;
+    top: 3px;
     .transition(.25s);
-  }  
+  }
 }
 
 .login-link {
@@ -105,7 +105,7 @@
 // Retina support
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-moz-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 3/2), only screen and (-o-min-device-pixel-ratio: 2/1), only screen and (-moz-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 2) {
   .login {
-    background-image: asset-url("login/imac-2x.png");
-  }  
-}    
+    background-image: ~"image-url(login/imac-2x.png)";
+  }
+}
 
