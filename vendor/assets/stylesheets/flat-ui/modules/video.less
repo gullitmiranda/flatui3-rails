@@ -237,7 +237,7 @@ body.vjs-full-window {
 }
 
 .vjs-mute-control {
-  background: ~"video-url(volume-full.png) center -48px no-repeat";
+  background: ~"asset-url(video/volume-full.png) center -48px no-repeat";
   background-size: 16px 64px;
   cursor: pointer !important;
   position: absolute;
@@ -255,11 +255,11 @@ body.vjs-full-window {
   &.vjs-vol-0 {
     &,
     div {
-      background-image: ~"video-url(volume-off.png)";
+      background-image: ~"asset-url(video/volume-off.png)";
     }
   }
   div {
-    background: @controls-color ~"video-url(volume-full.png) no-repeat center 2px";
+    background: @controls-color ~"asset-url(video/volume-full.png) no-repeat center 2px";
     background-size: 16px 64px;
     height: 18px;
     .transition(opacity .25s);
@@ -382,7 +382,7 @@ body.vjs-full-window {
 }
 
 .vjs-fullscreen-control {
-  background-image: ~"video-url(fullscreen.png)";
+  background-image: ~"asset-url(video/fullscreen.png)";
   background-position: center -47px;
   background-size: 15px 64px;
   cursor: pointer !important;
@@ -398,7 +398,7 @@ body.vjs-full-window {
   }
   div {
     height: 18px;
-    background: ~"video-url(fullscreen.png) no-repeat center 2px";
+    background: ~"asset-url(video/fullscreen.png) no-repeat center 2px";
     background-size: 15px 64px;
     .transition(opacity .25s);
   }
