@@ -4,9 +4,7 @@ module Flatui3
       initializer 'flatui3.setup',
                   :after => 'less-rails.after.load_config_initializers',
                   :group => :all do |app|
-        if defined?(Less)
-          app.config.less.paths << File.join(config.root, 'vendor')
-        end
+        # app.config.less.paths << File.join(config.root, 'app')
       end
     end
   end
